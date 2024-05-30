@@ -9,4 +9,8 @@ class tarea(models.Model):
     descripcion=models.TextField()
     proyecto= models.ForeignKey(Project, on_delete=models.CASCADE)
 
-    
+class Usuario(models.Model):
+    nombre= models.CharField(max_length=200)
+    apellido=models.CharField(max_length=64)
+    password= models.CharField(max_length=64)
+
